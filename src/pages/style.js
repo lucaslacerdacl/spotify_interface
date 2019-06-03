@@ -30,25 +30,9 @@ export const Description = styled.Text`
   font-weight: bold;
   font-size: 38px;
   color: #FFFFFF;
-  padding: 150px 0;
+  padding: 150px 0 130px 0;
   text-align: center;
   line-height: 50;
-`;
-
-export const SignUpButton = styled.View`
-  background: #31b954;
-  width: 370px;
-  height: 60px;
-  border-radius: 100px;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const SignUpButtonText = styled.Text`
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 17px;
-  color: #FFFFFF;
 `;
 
 export const Logo = styled.Image`
