@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Logo, Description } from './style';
-import logo from '../../assets/images/logo.png';
+import logo from '../../../assets/images/logo.png';
 import LinearGradient from 'react-native-linear-gradient';
-import LoginButtons from '../components/LoginButtons';
+import LoginButtons from '../../components/LoginButtons';
+import { Alert } from 'react-native';
 
 export default class Login extends Component  {
+
+  signUp = () => {
+    this.props.navigation.navigate('SignUp');
+  }
+
+  accessWithFacebook = () => {
+    Alert.alert('Login com Facebook');
+  }
+
+  signIn = () => {
+    Alert.alert('Sign In');
+  }
+
   render() {
     return (
       <LinearGradient 
@@ -24,15 +38,18 @@ export default class Login extends Component  {
         <LoginButtons 
           background="#31b954" 
           color="#fff" 
-          text="SIGN UP FREE" />
+          text="SIGN UP FREE"
+          action={this.signUp} />
         <LoginButtons 
           background="#3b5999"
           color="#fff"
-          text="CONTINUE WITH FACEBOOK" />
+          text="CONTINUE WITH FACEBOOK"
+          action={this.accessWithFacebook} />
         <LoginButtons 
           background="#fff"
           color="#000"
-          text="LOG IN" />
+          text="LOG IN"
+          action={this.signIn} />
       </LinearGradient>
     )
   }
