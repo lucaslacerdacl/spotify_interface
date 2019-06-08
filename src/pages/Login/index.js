@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Container, Header, Title, Logo, Description } from './style';
 import logo from '../../../assets/images/logo.png';
 import LinearGradient from 'react-native-linear-gradient';
@@ -6,6 +7,10 @@ import LoginButtons from '../../components/LoginButtons';
 import { Alert } from 'react-native';
 
 export default class Login extends Component  {
+
+  static propTypes = {
+    navigation: PropTypes.object
+  }
 
   signUp = () => {
     this.props.navigation.navigate('SignUp');
