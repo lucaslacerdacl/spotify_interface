@@ -45,8 +45,8 @@ export default class LoginInput extends Component {
         <InputWrapper>
           <Input
             autoFocus={true} 
-            secureTextEntry={inputProps.secureTextEntry && !showSecureInput}  
-            { ...inputProps } />
+            { ...inputProps }
+            secureTextEntry={inputProps.secureTextEntry && !showSecureInput} />
           {this.renderIconOptions()}
         </InputWrapper>
         <Tip>{ tip }</Tip>
