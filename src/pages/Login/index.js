@@ -21,7 +21,7 @@ export default class Login extends Component  {
   }
 
   signIn = () => {
-    Alert.alert('Sign In');
+    this.props.navigation.navigate('SignIn');
   }
 
   render() {

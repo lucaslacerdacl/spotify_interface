@@ -5,6 +5,7 @@ import {
 
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 const Routes = createAppContainer(createStackNavigator({ 
   Login: {
@@ -15,6 +16,12 @@ const Routes = createAppContainer(createStackNavigator({
   },
   SignUp: {
     screen: SignUp,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SignIn: {
+    screen: SignIn,
     navigationOptions: {
       header: null
     }

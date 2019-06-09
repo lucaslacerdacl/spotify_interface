@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Title, Email, EmailInput, EmailLabel, EmailTip, NextButton, NextButtonText, EmailInputWrapper } from './style';
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from '../../components/NavigationBar';
+import LoginInput from '../../components/LoginInput';
 
 export default class SignUp extends Component {
 
@@ -30,18 +31,16 @@ export default class SignUp extends Component {
           where="Login"
           navigation={this.props.navigation} />
           <Title>Create account</Title>
-          <Email>
-            <EmailLabel>What's your email?</EmailLabel>
-            <EmailInputWrapper>
-            <EmailInput 
-              keyboardType="email-address"
-              autoCapitalize="none"
-              autoCorrect={false}
-              onChangeText={(text) => this.setState({ text })}
-              value={this.state.text} />
-            </EmailInputWrapper>
-            <EmailTip>You'll have to confirm this e-mail later.</EmailTip>
-          </Email>
+          <LoginInput
+            label="What's your email?"
+            tip="You'll have to confirm this e-mail later"
+            inputProps={{
+              keyboardType: "email-address",
+              autoCapitalize: "none",
+              autoCorrect: false,
+              onChangeText: (text) => this.setState({ text }),
+              value: this.state.text
+            }} />
           <NextButton style={{
             opacity: this.isInputValid() ? 1 : 0.5
           }}>
